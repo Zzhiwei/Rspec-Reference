@@ -28,10 +28,12 @@ RSpec.describe 'equality matchers' do
 
     it 'cares about object identity' do
       expect(c).to eq(d)
-      expect(c).to eql(d)
+      expect(c).to eql(d) 
+      # eq & eql checks for value equality
 
+      #equal() checks for same object in memory
       expect(c).to equal(e)
-      expect(c).to be(e)
+      expect(c).to be(e) #alias for equal
 
       expect(c).not_to equal(d)
       expect(c).not_to equal([1, 2, 3])

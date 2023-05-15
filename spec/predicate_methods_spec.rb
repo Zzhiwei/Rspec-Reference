@@ -2,6 +2,7 @@ RSpec.describe 'predicate methods and predicate matchers' do
   it 'can be tested with Ruby methods' do
     result = 16 / 2
     expect(result.even?).to eq(true)
+    # .even? .zero? .odd? .empty?
   end
 
   it 'can be tested with predicate matchers' do

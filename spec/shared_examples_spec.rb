@@ -6,6 +6,9 @@ end
 
 RSpec.describe Array do
   subject { [1, 2, 3] }
+
+  # instead of duplicating line 2 to 4 here
+  # use include_examples helper
   include_examples 'a Ruby object with three elements'
 end
 

@@ -7,7 +7,9 @@ RSpec.describe 'contain_exactly matcher' do
       expect(subject).to contain_exactly(3, 2, 1)
       expect(subject).to contain_exactly(2, 1, 3)
 
+      # following tests fails
       # expect(subject).to contain_exactly(1, 2)
+      # expect(subject).to contain_exactly(1, 2, 3, 3)
       # expect(subject).to contain_exactly(1, 2, 3, 4)
     end
   end
