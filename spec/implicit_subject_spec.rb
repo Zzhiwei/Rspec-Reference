@@ -1,4 +1,6 @@
-RSpec.describe Hash do
+# whenever a Class name is placed here,
+# subject is made avail as an instance i.e. equiv to let line below
+RSpec.describe Hash do 
   # let(:my_hash) { {} }
 
   it 'should start off empty' do

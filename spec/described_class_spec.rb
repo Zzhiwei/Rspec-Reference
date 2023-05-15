@@ -6,7 +6,8 @@ class Prince
   end
 end
 
-RSpec.describe Prince do
+RSpec.describe Prince do 
+  # described_class references class under test (in describe line)
   subject { described_class.new('Boris') }
   let(:louis) { described_class.new('Louis') }
 

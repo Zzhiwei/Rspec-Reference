@@ -1,4 +1,6 @@
 RSpec.describe 'before and after hooks' do
+  # :context here refers the current describe/context block, 
+  # i.e. parent block which is RSpec.describe
   before(:context) do
     puts 'Before context'
   end
@@ -7,6 +9,7 @@ RSpec.describe 'before and after hooks' do
     puts 'After context'
   end
 
+  # same as without arg
   before(:example) do
     puts 'Before example'
   end
