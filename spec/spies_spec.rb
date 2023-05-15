@@ -1,9 +1,18 @@
+=begin
+
+spy: (diff vs double)
+(!) specifies expectations after action
+(!) does need to specify methods when creating spy instance
+
+between using spy vs double there is no right ans, debatable
+=end
+
 RSpec.describe 'spies' do
   let(:animal) { spy('animal') }
 
   it 'confirms that a message has been received' do
     animal.eat_food
-    expect(animal).to have_received(:eat_food)
+    expect(animal).to have_received(:eat_food) # we did not define this
     expect(animal).not_to have_received(:eat_human)
   end
 
@@ -20,5 +29,4 @@ RSpec.describe 'spies' do
     expect(animal).to have_received(:eat_food).with('Sushi')
     expect(animal).to have_received(:eat_food).once.with('Sushi')
   end
-
 end

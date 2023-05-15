@@ -34,3 +34,11 @@ https://www.udemy.com/course/testing-ruby-with-rspec/
 25. satisfy: custom predicate function
 26. not_to_spec
 27. compound expectations
+<!-- mocking -->
+28. double()
+29. movie 
+30. allow(double_or_real_obj).to receive(:method_name).with(matching_arg).and_return(a, b, c)
+31. matching arguments
+32. instance double (only can mock real methods)
+33. class double
+34. spies I (vs double)

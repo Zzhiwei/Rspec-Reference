@@ -43,6 +43,9 @@ end
 # movie = Movie.new(actor)
 # movie.start_shooting
 
+
+## the big question in this example is how can we test movie in isolation
+## from Actor class
 RSpec.describe Movie do
   let(:stuntman) { double("Mr. Danger", ready?: true, act: 'Any string at all', fall_off_ladder: 'Sure! Lets do it', light_on_fire: true)}
   subject { described_class.new(stuntman) }
@@ -56,6 +59,9 @@ RSpec.describe Movie do
       # expect(stuntman).to receive(:act).twice
       # expect(stuntman).to receive(:act).exactly(2).times
       expect(stuntman).to receive(:act).at_least(2).times
+      
+      # (!) notice we are calling expect before start_shoot() is called
+      # (!) each expect count statements stack (try uncommenting above)
       subject.start_shooting
     end
   end
